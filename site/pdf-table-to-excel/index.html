@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PDF Table to Excel Converter - Extract Tables from PDF Online</title>
+  <meta name="description" content="Extract tables from text-based PDFs and download clean Excel or CSV files online.">
+  <link rel="canonical" href="https://pdftabletoexcel.com/pdf-table-to-excel/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PDF Table to Excel Converter">
+  <meta property="og:description" content="Extract tables from text-based PDFs and download clean Excel or CSV files online.">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <script type="application/ld+json">[{"@context":"https://schema.org","@type":"SoftwareApplication","name":"PDF Table to Excel Converter","applicationCategory":"BusinessApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Extract tables from text-based PDFs and export them as Excel or CSV files."},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can this tool convert scanned PDFs?","acceptedAnswer":{"@type":"Answer","text":"The converter works with text-based PDFs where table text is selectable. Image-based or scanned PDFs need OCR, which will be supported later."}},{"@type":"Question","name":"Are my PDF files stored?","acceptedAnswer":{"@type":"Answer","text":"No account or database is used. Files are processed temporarily for the conversion request and then deleted."}},{"@type":"Question","name":"What formats can I download?","acceptedAnswer":{"@type":"Answer","text":"You can download detected tables as XLSX for Excel or CSV for spreadsheet and data tools."}}]}]</script>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav"><a class="brand" href="/pdf-table-to-excel/"><span class="brand-mark">▦</span><span>PDF Table to Excel</span></a><div class="nav-links"><a href="/pdf-table-to-excel/">PDF Table to Excel</a><a href="/pdf-to-excel/">PDF to Excel</a><a href="/extract-tables-from-pdf/">Extract Tables</a><a href="/pdf-to-csv/">PDF to CSV</a></div></nav>
+  </header>
+  <main>
+    <section class="section">
+      <div class="container hero">
+        <div>
+          <p class="eyebrow">Free online PDF table extractor</p>
+          <h1>PDF Table to Excel Converter</h1>
+          <p class="lead">Extract tables from text-based PDFs and download clean Excel or CSV files. Image-based or scanned PDFs need OCR, which will be supported later.</p>
+          <div class="trust-row"><span class="pill">Temporary processing</span><span class="pill">XLSX and CSV export</span><span class="pill">Text-based PDFs</span><span class="pill">OCR coming later</span></div>
+        </div>
+        <section class="tool-panel" data-converter data-api-base="http://localhost:8000">
+          <div class="dropzone"><label class="drop-target" data-drop-target><input class="file-input" data-file-input type="file" accept="application/pdf,.pdf"><span><span class="upload-icon">⇧</span><strong>Drop a text-based PDF here</strong><br><span>or choose a PDF from your device. Max 10 MB and 30 pages.</span><span class="button-row"><span class="button">Choose PDF</span></span></span></label></div>
+          <div class="tool-status" data-status>Ready. Your PDF is only used for this conversion request.</div>
+          <div class="results" data-results><div class="result-header"><div><h3 data-result-title>Detected tables</h3><p data-result-summary></p></div><div class="downloads"><button type="button" data-download-xlsx>Download XLSX</button><button class="secondary" type="button" data-download-csv>Download CSV</button></div></div><div class="table-preview" data-preview></div></div>
+        </section>
+      </div>
+    </section>
+    <section class="section compact"><div class="container grid"><article class="card"><h3>Built for tables</h3><p>Instead of converting the whole document layout, this tool focuses on rows and columns that can be reused in Excel.</p></article><article class="card"><h3>Private by default</h3><p>The API processes the file for the current request only. There are no accounts, saved files, or conversion history.</p></article><article class="card"><h3>Scanned PDFs need OCR</h3><p>PDFs made from images or scans require OCR before table extraction. OCR support is planned, but this tool only extracts selectable text today.</p></article></div></section>
+    <section class="section compact"><div class="container feedback-panel"><div><p class="eyebrow">Feedback</p><h2>Need OCR or better table extraction?</h2><p>Tell us what kind of PDF you are trying to convert. Feedback helps prioritize scanned PDF support, bank statement layouts, and tricky table formats.</p><p class="feedback-email">Email: <a href="mailto:mythzsl67@gmail.com">mythzsl67@gmail.com</a></p></div><form class="feedback-form" data-feedback-form><label>Your email<input type="email" data-feedback-email placeholder="you@example.com"></label><label>What should work better?<textarea data-feedback-message rows="4" placeholder="Example: I need OCR for scanned invoices with multi-page tables."></textarea></label><button type="submit">Send feedback</button><p class="feedback-help">This opens your email app. You can also copy the email address shown on this page.</p></form></div></section>
+    <section class="section compact"><div class="container"><h2>How it works</h2><div class="grid"><div class="card"><h3>1. Upload a PDF</h3><p>Choose a text-based PDF where the table text can be selected.</p></div><div class="card"><h3>2. Preview tables</h3><p>The service detects tables and shows a preview of the first result.</p></div><div class="card"><h3>3. Download files</h3><p>Export every detected table to Excel or CSV for analysis.</p></div></div></div></section>
+  </main>
+  <footer class="footer"><div class="footer-inner"><span>© 2026 PDF Table to Excel. Files are processed temporarily.</span><span><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></span></div></footer>
+  <script src="/assets/converter.js"></script>
+</body>
+</html>

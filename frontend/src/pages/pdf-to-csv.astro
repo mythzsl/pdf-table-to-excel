@@ -1,0 +1,29 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Converter from "../components/Converter.astro";
+---
+
+<BaseLayout
+  title="PDF to CSV Table Converter"
+  description="Extract tables from text-based PDFs and download a clean CSV file online."
+  canonicalPath="/pdf-to-csv/"
+>
+  <section class="section">
+    <div class="container hero">
+      <div>
+        <p class="eyebrow">PDF table data to CSV</p>
+        <h1>Convert PDF tables to CSV</h1>
+        <p class="lead">Download detected PDF tables as CSV when you need a lightweight format for spreadsheets, BI tools, or scripts.</p>
+      </div>
+      <Converter />
+    </div>
+  </section>
+  <section class="section compact">
+    <div class="container grid">
+      <article class="card"><h3>Simple export</h3><p>The CSV download includes table titles followed by extracted rows.</p></article>
+      <article class="card"><h3>UTF-8 output</h3><p>CSV files are encoded for modern spreadsheet tools.</p></article>
+      <article class="card"><h3>No account</h3><p>Run quick table extraction without creating a workspace or storing files.</p></article>
+    </div>
+  </section>
+</BaseLayout>
+

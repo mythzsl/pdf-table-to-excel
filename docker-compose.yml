@@ -1,0 +1,12 @@
+services:
+  backend:
+    build:
+      context: ./backend
+    environment:
+      ALLOWED_ORIGINS: "http://localhost:4321,http://127.0.0.1:4321"
+      MAX_UPLOAD_MB: "10"
+      MAX_PAGES: "30"
+      RATE_LIMIT_PER_HOUR: "3"
+    ports:
+      - "8000:8000"
+

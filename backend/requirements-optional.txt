@@ -1,0 +1,4 @@
+# Optional lattice-table fallback. Install only when the deployment image has
+# compatible system dependencies such as Ghostscript/OpenCV.
+camelot-py[cv]==0.11.0
+

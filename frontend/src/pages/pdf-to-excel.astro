@@ -1,0 +1,28 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Converter from "../components/Converter.astro";
+---
+
+<BaseLayout
+  title="PDF to Excel Converter for Tables"
+  description="Convert text-based PDF tables into editable Excel spreadsheets online."
+  canonicalPath="/pdf-to-excel/"
+>
+  <section class="section">
+    <div class="container hero">
+      <div>
+        <p class="eyebrow">PDF to Excel for data tables</p>
+        <h1>Convert PDF tables to Excel</h1>
+        <p class="lead">Use this converter when your goal is to reuse table data from reports, statements, invoices, or research PDFs in a spreadsheet.</p>
+      </div>
+      <Converter />
+    </div>
+  </section>
+  <section class="section compact">
+    <div class="container grid">
+      <article class="card"><h3>Best for selectable text</h3><p>If you can highlight the table text in a PDF viewer, this extractor is designed for that document type.</p></article>
+      <article class="card"><h3>Excel-ready output</h3><p>Each detected table becomes a worksheet in the XLSX download.</p></article>
+      <article class="card"><h3>Scanned PDFs need OCR</h3><p>Image-based or scanned PDFs require OCR, which will be supported later.</p></article>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,31 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Converter from "../components/Converter.astro";
+---
+
+<BaseLayout
+  title="Extract Tables from PDF Online"
+  description="Extract table rows and columns from text-based PDFs and export them to Excel or CSV."
+  canonicalPath="/extract-tables-from-pdf/"
+>
+  <section class="section">
+    <div class="container hero">
+      <div>
+        <p class="eyebrow">Online table extraction</p>
+        <h1>Extract tables from PDF files</h1>
+        <p class="lead">Pull structured rows and columns from text-based PDF reports without retyping. Image-based or scanned PDFs need OCR, which will be supported later.</p>
+      </div>
+      <Converter />
+    </div>
+  </section>
+  <section class="section compact">
+    <div class="container">
+      <h2>When this works best</h2>
+      <div class="grid">
+        <article class="card"><h3>Reports</h3><p>Extract tables from annual reports, market research, and operational PDFs.</p></article>
+        <article class="card"><h3>Statements</h3><p>Move simple statement tables into Excel for sorting and analysis.</p></article>
+        <article class="card"><h3>Research data</h3><p>Reuse published table data without manually copying every row.</p></article>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

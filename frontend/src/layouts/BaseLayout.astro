@@ -1,0 +1,65 @@
+---
+import "../styles/global.css";
+import { SITE, navItems } from "../site";
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalPath: string;
+  schema?: Record<string, unknown> | Record<string, unknown>[];
+}
+
+const { title, description, canonicalPath, schema } = Astro.props;
+const canonicalUrl = new URL(canonicalPath, SITE.url).toString();
+const fullTitle = title.includes(SITE.name) ? title : `${title} | ${SITE.name}`;
+const clarityId = import.meta.env.PUBLIC_CLARITY_ID;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta name="twitter:card" content="summary_large_image" />
+    {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
+    {clarityId && (
+      <script is:inline set:html={`(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "${clarityId}");`} />
+    )}
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar">
+        <nav class="nav" aria-label="Main navigation">
+          <a class="brand" href="/pdf-table-to-excel/" aria-label="PDF Table to Excel home">
+            <span class="brand-mark" aria-hidden="true">▦</span>
+            <span>{SITE.name}</span>
+          </a>
+          <div class="nav-links">
+            {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
+          </div>
+        </nav>
+      </header>
+      <main>
+        <slot />
+      </main>
+      <footer class="footer">
+        <div class="footer-inner">
+          <span>© {new Date().getFullYear()} {SITE.name}. Files are processed temporarily.</span>
+          <span>
+            <a href="/privacy/">Privacy</a>
+            <a href="/terms/">Terms</a>
+          </span>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+
