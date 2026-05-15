@@ -25,7 +25,7 @@
           <p class="lead">Extract tables from text-based PDFs and download clean Excel or CSV files. Image-based or scanned PDFs need OCR, which will be supported later.</p>
           <div class="trust-row"><span class="pill">Temporary processing</span><span class="pill">XLSX and CSV export</span><span class="pill">Text-based PDFs</span><span class="pill">OCR coming later</span></div>
         </div>
-        <section class="tool-panel" data-converter data-api-base="http://localhost:8000">
+        <section class="tool-panel" data-converter data-api-base="https://pdf-table-to-excel-production.up.railway.app">
           <div class="dropzone"><label class="drop-target" data-drop-target><input class="file-input" data-file-input type="file" accept="application/pdf,.pdf"><span><span class="upload-icon">⇧</span><strong>Drop a text-based PDF here</strong><br><span>or choose a PDF from your device. Max 10 MB and 30 pages.</span><span class="button-row"><span class="button">Choose PDF</span></span></span></label></div>
           <div class="tool-status" data-status>Ready. Your PDF is only used for this conversion request.</div>
           <div class="results" data-results><div class="result-header"><div><h3 data-result-title>Detected tables</h3><p data-result-summary></p></div><div class="downloads"><button type="button" data-download-xlsx>Download XLSX</button><button class="secondary" type="button" data-download-csv>Download CSV</button></div></div><div class="table-preview" data-preview></div></div>

@@ -49,8 +49,8 @@ Set `PUBLIC_API_BASE_URL=http://localhost:8000` for local frontend testing.
 - Optional: deploy `frontend/` to Cloudflare Pages after installing Node dependencies and running the Astro build.
 - Deploy `backend/` to Railway using the Dockerfile.
 - Set CORS allowed origins in the backend with `ALLOWED_ORIGINS=https://yourdomain.com`.
-- In `site/pdf-table-to-excel/index.html`, replace `data-api-base="http://localhost:8000"` with `data-api-base="https://api.yourdomain.com"` before production deploy.
-- If using Astro, set `PUBLIC_API_BASE_URL=https://api.yourdomain.com` in Cloudflare Pages.
+- In `site/pdf-table-to-excel/index.html`, set `data-api-base="https://pdf-table-to-excel-production.up.railway.app"` before production deploy.
+- If using Astro, set `PUBLIC_API_BASE_URL=https://pdf-table-to-excel-production.up.railway.app` in Cloudflare Pages.
 
 ## Cost guardrails
 
