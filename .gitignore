@@ -19,3 +19,8 @@ tmp/
 uploads/
 backend/.venv/
 
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
