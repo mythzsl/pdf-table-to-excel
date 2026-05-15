@@ -100,7 +100,7 @@ if (root) {
       setStatus(payload.warnings?.[0] || "Done. Download your Excel or CSV file.", payload.warnings?.length ? "warning" : "success");
     } catch (error) {
       track("extraction_failed", { message: "network_error" });
-      setStatus("The API is not reachable. Check that the backend is running on port 8000.", "error");
+      setStatus("The API is not reachable. Check the backend URL and CORS settings.", "error");
     }
   };
 
